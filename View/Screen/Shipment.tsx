@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, Image,FlatList, SafeAreaView, ActivityIndicator, RefreshControl } from 'react-native'
+import { View, Text, Image,FlatList, SafeAreaView, ActivityIndicator, RefreshControl, Dimensions, Platform } from 'react-native'
 import Checkbox from 'expo-checkbox';
 import { styles, shipmentStyles, primaryColor } from '../../Style/styles'
 import HeaderComponent from '../Component/HeaderComponent'
@@ -233,7 +233,7 @@ React.useEffect(()=>{
       
       }
         keyExtractor={item => item.name}
-        style={{height:400}}
+        style={{height:Platform.OS ==='ios' ? Dimensions.get('screen').height/2.0 : Dimensions.get('screen').height/2.2}}
         refreshing={refreshing}
         onRefresh={onRefresh}
         ListFooterComponent={() =>
@@ -241,7 +241,7 @@ React.useEffect(()=>{
         }
       />}
      
-        <View style={{height:200}}/>
+        <View style={{height:400}}/>
         </View>
         </SafeAreaView>
         <FilterDrawerComponent visible={filterModal} onClose={()=>{setFilterModal(false)}} selectHandler={selectChangeHandler} data={shipment.shipmentStatus}

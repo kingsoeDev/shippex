@@ -11,7 +11,7 @@ import { setLoginStateValue } from '../../Redux/Reducer/login';
 import { useNavigate } from 'react-router-native';
 import { handleLoginRequest } from '../../Redux/Action/generalAction';
 import Toast from 'react-native-toast-message';
-import { showToast, toastConfig } from '../../Helper/helpers';
+import { showToast, toastConfig} from '../../Helper/helpers';
 import { setUserStateValue } from '../../Redux/Reducer/user';
 
 
@@ -36,21 +36,12 @@ const inputChangeHandler = (value:string,attribute:string) =>{
 
 //function to validate input before submition
 const verifiedFieldData = () =>{
-  if (login.email.length > 3) {
-    const re =
-      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    const result = re.test(String(login.email).toLowerCase());
-    if (result == false) {
-      showToast("Please enter a valid email address!")
-       return true;
-    } 
-
-  } else if(login.email.length < 4) {
-    showToast("Email should be more than 4 characters!")
+if(login.email.length < 1) {
+    showToast("Email/ username field should not be empty!",'error')
     return true;
   }
    if (login.password.length < 1) {
-    showToast("Password field is compulsory!")
+    showToast("Password field is compulsory!",'error')
     return true;
   }
   
@@ -77,20 +68,20 @@ const submitLoginForm = () =>{
    switch(response.status)
    {
     case 401 :
-      showToast(response.data.message,'error')
+      showToast(response.data.message,'error','Authorization Failed')
       break;
     case 200:
-      showToast('Authentication Successful','success','Request Successful')
+      showToast('Authentication Successful','success','Authorization Successful')
       dispatch(setUserStateValue({
         isLoggin:true,
         name:response.data?.full_name
       }))
      setTimeout(() => {
       navigate('/')
-     }, 2000);
+     }, 1000);
       break;
     default:
-      showToast(response.data.message,'error')
+      showToast(response.data.message,'error','Authorization Error')
     break;
    }
   })

@@ -19,7 +19,8 @@ export const shipmentItemStyles = StyleSheet.create({
         paddingVertical:10,
         backgroundColor:"#F4F2F8",
         paddingHorizontal:10,
-        borderWidth:5,
+        borderTopWidth:5,
+        borderWidth:Platform.OS ==="ios" ? 5: 0,
         borderColor:"#fff"
     },
     checkbox:{
@@ -35,33 +36,33 @@ export const shipmentItemStyles = StyleSheet.create({
     },
     txt1:{
      fontSize:13,
-     fontFamily:"SpfRegularText",
+     fontFamily:"InterRegularText",
      color:"#3F395C"
     },
     txt2:{
         fontSize:18,
-        fontFamily:"SpfSemiBoldText",
+        fontFamily:"InterSemiBoldText",
         color:"#000"
        },
        txt3:{
         fontSize:13,
-        fontFamily:"SpfRegularText",
+        fontFamily:"InterRegularText",
         color:"#757281"
        },
        txt4:{
         fontSize:11,
-        fontFamily:"SpfRegularText",
+        fontFamily:"InterRegularText",
         color:"#2F50C1"
        },
        txt5:{
         fontSize:16,
-        fontFamily:"SpfRegularText",
+        fontFamily:"InterRegularText",
         color:"#000"
        },
 
        txt6:{
         fontSize:13,
-        fontFamily:"SpfLightText",
+        fontFamily:"InterLightText",
         color:"#58536E"
        },
     callBtn:{
@@ -75,7 +76,7 @@ export const shipmentItemStyles = StyleSheet.create({
     callBtnTxt:{
        color:"#fff",
        fontSize:16,
-       fontFamily:"SpfRegularText",
+       fontFamily:"InterRegularText",
   
        },
     whatsappBtn:{
@@ -90,7 +91,7 @@ export const shipmentItemStyles = StyleSheet.create({
     whatsappBtnText:{
         color:"#fff",
         fontSize:16,
-        fontFamily:"SpfRegularText",
+        fontFamily:"InterRegularText",
     },
        statusBtn:{
         backgroundColor:"#D9E6FD",
@@ -102,7 +103,7 @@ export const shipmentItemStyles = StyleSheet.create({
        },
        statusBtnTxt:{
         fontSize:11,
-        fontFamily:"SpfMediumText",
+        fontFamily:"InterMediumText",
         color:"#2F50C1",
         textAlign:"center"
        },

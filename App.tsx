@@ -17,6 +17,12 @@ export default function App() {
     SpfSemiBoldText: require('./assets/font/SF-Pro-Text-Semibold.otf'),
     SpfMediumText: require('./assets/font/SF-Pro-Text-Medium.otf'),
     SpfLightText: require('./assets/font/SF-Pro-Text-Light.otf'),
+    InterRegularText: require('./assets/font/Inter-Regular.otf'),
+    InterBoldText: require('./assets/font/Inter-Bold.otf'),
+    InterSemiBoldText: require('./assets/font/Inter-SemiBold.otf'),
+    InterMediumText: require('./assets/font/Inter-Medium.otf'),
+    InterLightText: require('./assets/font/Inter-Light-BETA.otf'),
+
 
   });
 

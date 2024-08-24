@@ -1,26 +1,13 @@
 
 import Toast, { ErrorToast, BaseToast } from "react-native-toast-message";
-import { Text, View } from "react-native";
-export const showToast = (message:any, type="validator", header="Validation Error") => {
+export const showToast = (message:any, type="error", header="Validation Error") => {
     Toast.show({
       type: type,
       text1: header,
       text2: message
     });
   }
-  export const validatorToast = (data:any) =>{
-      
-      for (const key in data.errors) {
-        if (data.errors.hasOwnProperty(key)) {
-          const messagesForKey = data.errors[key]; 
-          if (messagesForKey && messagesForKey.length > 0) {
-            const msg= messagesForKey[0] 
-            showToast(msg)
-            break; 
-          }
-        }
-      }
-  }
+
 export const toastConfig = {
  
     success: (props:any) => (

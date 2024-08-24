@@ -18,7 +18,7 @@ function SearchInputComponent(props: Props) {
     return (
         <Pressable
             onPress={() => setInputIsClick(true)}
-            style={[inputStyle.container, { borderColor: inputIsClick ? primaryColor : "#F4F2F8", borderWidth: 1 }]}>
+            style={[inputStyle.container, { borderColor: inputIsClick ? primaryColor : "#F4F2F8", borderWidth: 1, marginTop:10 }]}>
             <View style={[inputStyle.flex, { alignItems: "center" }]}>
                 <Text><EvilIcons name="search" size={34} color={inputIsClick ? primaryColor : "#A7A3B3"} /></Text>
                 <TextInput

@@ -30,7 +30,7 @@ export const styles = StyleSheet.create({
       padding:7
     },
     bottomHeader:{
-    marginTop:20
+    marginTop:15
     },
     hello:{
       color:"#000",
@@ -52,7 +52,7 @@ export const styles = StyleSheet.create({
       flexDirection:"row",
       alignItems:"center",
       fontSize:16,
-      fontFamily:"SpfRegularText",
+      fontFamily:"InterRegularText",
       color:"#58536E",
        textAlign:"center"
     },
@@ -66,7 +66,7 @@ export const styles = StyleSheet.create({
       flexDirection:"row",
       alignItems:"center",
       fontSize:16,
-      fontFamily:"SpfRegularText",
+      fontFamily:"InterRegularText",
       color:"#FFF",
       textAlign:"center"
     }
@@ -169,7 +169,7 @@ export const filterDrawerStyle = StyleSheet.create({
   },
   modalContent: {
      backgroundColor:colorWhite,
-    height: Platform.OS ==="ios" ?"35%" :"35%",
+    minHeight: Platform.OS ==="ios" ?"35%" :"35%",
     width: '100%',
     borderRadius: 10,
     paddingHorizontal: 20,
@@ -184,17 +184,17 @@ export const filterDrawerStyle = StyleSheet.create({
   cancelBtn:{
       color:"#4561DB",
       fontSize:16,
-      fontFamily:"SpfMediumText"
+      fontFamily:"InterMediumText"
   },
   title:{
       color:"#000",
       fontSize:18,
-      fontFamily:"SpfSemiBoldText"
+      fontFamily:"InterSemiBoldText"
   },
   subTitle:{
   fontSize:13,
-  fontFamily:"SpfMediumText",
-  paddingVertical:10
+  fontFamily:"InterMediumText",
+  paddingVertical:15
   },
   statusListWrapper:{
     flexDirection:"row",
@@ -204,7 +204,7 @@ export const filterDrawerStyle = StyleSheet.create({
     backgroundColor:"#F4F2F8",
     paddingVertical:6,
     borderRadius:10,
-    paddingHorizontal:15,
+    paddingHorizontal:10,
     marginRight:10,
     marginBottom:10,
   
@@ -212,7 +212,7 @@ export const filterDrawerStyle = StyleSheet.create({
   selectBtnText:{
     color:"#58536E",
     fontSize:16,
-    fontFamily:"SpfRegularText"
+    fontFamily:"InterRegularText"
   },
 
 
@@ -232,14 +232,14 @@ export const inputStyle = StyleSheet.create({
       },
       input:{
         fontSize:16,
-        fontFamily:"SpfRegularText",
+        fontFamily:"InterRegularText",
         color:"#2F50C1",
         width:"88%"
        
       },
       label:{
         fontSize:11,
-        fontFamily:"SpfRegularText",
+        fontFamily:"InterRegularText",
         color:"#58536E",
       },
       flex:{
@@ -248,7 +248,8 @@ export const inputStyle = StyleSheet.create({
       },
       urlPrefix:{
         fontSize:16,
-        color:"#58536E"
+        color:"#58536E",
+        fontFamily:"InterRegularText"
       }
       
 
@@ -306,7 +307,7 @@ export const bottomNavigationStyles = StyleSheet.create({
       flexDirection:"row",
       justifyContent:"space-between",
       alignItems:"center",
-      marginTop:20,
+      marginTop:10,
     },
     flex:{
       flexDirection:"row",
