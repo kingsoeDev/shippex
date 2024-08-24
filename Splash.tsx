@@ -65,7 +65,7 @@ const Splash = ({ onFinish }) => {
   return (
     <Animated.View style={[styles.container, { backgroundColor }]}>
       <Animated.Image
-        source={require('./assets/image/splashlogo.png')}
+        source={require('./assets/image/iconb.png')}
         style={[
           styles.logo,
           {
@@ -88,8 +88,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   logo: {
-    width: width * 0.1,
-    height: height * 0.1,
+    width: width * 0.3,
+    height: height * 0.3,
   },
 });
 
